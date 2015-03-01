@@ -1,25 +1,22 @@
 (function(){
     "use strict";
 
-    angular.module('twitterFeed', ['ngMaterial'])
+    angular.module('twitterFeed', ['ngMaterial', $httpProvider])
 
         .config(function($mdThemingProvider) {
             $mdThemingProvider.theme('default')
                 .primaryPalette('orange')
                 .accentPalette('yellow');
         })
+        .config(['$httpProvider', function($httpProvider){
+            $httpProvider.defaults.useXDomain = true;
+            $httpProvider.defaults.headers.common = 'Content-Type: application/json';
+            delete $httpProvider.defaults.headers.common['X-Requested-With'];
+        }])
 
         .controller('TweetController', ['$scope', '$http', function($scope, $http){
 
             $scope.results = [];
-
-            var stringGen = function (){
-                var text = '';
-                var charset = 'abcdefghijklmnopqrstuvwxyz0123456789';
-                for (var i=0; i < 32; i++)
-                    text += charset.charAt(Math.floor(Math.random() * charset.length));
-                return text;
-            };
 
             $scope.getTweets = function() {
 
