@@ -20,8 +20,8 @@
 
             $scope.getTweets = function() {
 
-                var consumerKey = 'MahO7BE0nFzmJ2qcSaRSJHGgk';
-                var consumerSecret = 'xHaEjvf4Hg26WpHQNQgunOM4ChwoKkEcqnxmJHWvne06FHckVA';
+                var consumerKey = '';
+                var consumerSecret = '';
                 var tokenCredentials = consumerKey + ":" + consumerSecret;
                 var encodedTokenCredentials = btoa(tokenCredentials);
 
