@@ -28,13 +28,13 @@
                     url: 'https://api.twitter.com/1.1/statuses/user_timeline.json',
                     params: {
                         count: '10',
-                        oauth_consumer_key: 'MahO7BE0nFzmJ2qcSaRSJHGgk',
+                        oauth_consumer_key: '',
                         oauth_nonce: stringGen(),
                         oauth_signature_method: 'HMAC-SHA1',
                         oauth_timestamp: 'new Date().getTime()',
-                        oauth_token: '15505749-X9QEX4KkLKlcFsW12tTBkVOo5UH1GuK2csckk7rw3',
-                        user_id: '15505749',
-                        screen_name: 'carlmlane'
+                        oauth_token: '',
+                        user_id: '',
+                        screen_name: ''
                     }
                 }).success(function(data){
 
